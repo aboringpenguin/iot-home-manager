@@ -55,7 +55,7 @@ async def lifespan(app: FastAPI):
     print("[System] Clean exit achieved.")
 
 
-app = FastAPI(lifespan=lifespan, title="Mitsubishi Home Automation Service (Airbender)")
+app = FastAPI(lifespan=lifespan, title="Iot Home Manager")
 
 
 # ==================== CORE LOGGING LOGIC ====================
@@ -165,7 +165,7 @@ async def get_api_help():
     """Returns a dynamic, readable command blueprint helper directly in the terminal."""
     return """
 ================================================================================
-                    AIRBENDER API - COMMAND BLUEPRINT HELPER                    
+                    IOT HOME MANAGER API - COMMAND BLUEPRINT HELPER                    
 ================================================================================
 Base URL: http://127.0.0.1:8000
 
@@ -446,4 +446,4 @@ async def control_device(
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("airbender:app", host="0.0.0.0", port=SERVER_PORT, log_level="info")
+    uvicorn.run("iot-home-manager:app", host="0.0.0.0", port=SERVER_PORT, log_level="info")
