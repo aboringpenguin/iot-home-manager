@@ -1,0 +1,13 @@
+# Credenziali e variabili d'ambiente
+.env
+
+# Cartelle virtuali di Python e UV
+.venv/
+.uv/
+
+# File di cache di Python
+__pycache__/
+*.pyc
+
+# Log giornalieri generati dallo script
+log_*.csv
