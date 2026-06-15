@@ -11,3 +11,7 @@ __pycache__/
 
 # Log giornalieri generati dallo script
 log_*.csv
+logs/
+
+# Docker secrets files
+secrets/

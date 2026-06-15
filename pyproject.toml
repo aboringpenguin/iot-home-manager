@@ -1,5 +1,5 @@
 [project]
-name = "airbender"
+name = "iot-home-manager"
 version = "0.1.0"
 description = "Automatic AC Manager"
 readme = "README.md"

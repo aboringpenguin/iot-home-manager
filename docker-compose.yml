@@ -1,0 +1,27 @@
+services:
+  iot-home-manager:
+    build: .
+    container_name: iot-home-manager
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - LOG_INTERVAL=3600
+      - SERVER_PORT=8000
+      # If you prefer not to use Docker Secrets, you can pass credentials as environment variables directly,
+      # or uncomment the line below to load them from your local .env file.
+      # env_file:
+      #   - .env
+    volumes:
+      - ./logs:/app/logs
+    secrets:
+      - melcloud_email
+      - melcloud_password
+
+secrets:
+  # To run with Docker Secrets, create these files on your host and put the raw values inside.
+  # These files should not be committed to Git.
+  melcloud_email:
+    file: ./secrets/melcloud_email
+  melcloud_password:
+    file: ./secrets/melcloud_password
